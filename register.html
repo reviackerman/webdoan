@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+    <link rel="icon" href="assets/images/logo.ico" type="image/x-icon">
+
+    <style>
+        /* Reset mặc định */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: #000;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        a:hover {
+            color: red;
+            transition: all 0.3s ease;
+        }
+
+        /* Background ảnh full màn */
+        .background {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+        }
+
+        .background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Container chính */
+        .login-contain {
+            width: clamp(280px, 25%, 400px); /* Tự co giữa 280-400px */
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(158, 202, 255, 1);
+            box-shadow: 0 0 20px rgba(112, 177, 255, 0.9);                 
+            transition: all 0.3s ease;
+        }
+
+        .login-contain:hover{
+            box-shadow: 0 0 40px rgba(87, 158, 246, 1);                 
+        }
+
+        .login-contain h2 {
+            text-align: center;
+            color: #fff;
+            font-size: clamp(1.2rem, 2vw, 1.8rem);
+            margin-bottom: 20px;
+        }
+
+        /* Input group */
+        .form-group {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .form-group img {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            align-items: center;
+        }
+
+        .form-group label{
+            cursor: pointer;
+        }
+        
+        .form-group input { 
+            width: 100%;
+            border-radius: 10px;
+            padding: 12px;
+            border: none;
+            outline: none;
+            font-size: clamp(0.6rem, 0.7vw, 0.7rem);
+        }
+
+        .form-group-support {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 15px;
+            color: #fff;
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
+            flex-wrap: wrap; /* Khi màn hình nhỏ, tự xuống dòng */
+            gap: 5px;
+        }
+
+        /* Button */
+        .login-contain button {
+            display: block;
+            width: 70%;
+            padding: 12px;
+            margin: 25px auto 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.85);
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .login-contain button:hover {
+            background: red;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 600px) {
+            .login-contain {
+                width: 85%;
+                padding: 20px;
+                border-width: 1px;
+            }
+
+            .login-contain h2 {
+                font-size: 1.5rem;
+            }
+
+            .login-contain button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <img src="assets/images/Background.jpg" alt="BackGround">
+    </div>
+
+    <div class="login-contain">
+        <h2>CREATE ACCOUNT</h2> 
+
+        <form action="index.html" method="get">
+            <div class="form-group">
+                <label for="username">
+                    <img src="assets/images/Icon_username.png" alt="username">
+                </label>                
+                <input type="text" id="username" name="username" placeholder="USERNAME" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">
+                    <img src="assets/images/Icon_email.png" alt="email">
+                </label>                
+                <input type="text" id="email" name="email" placeholder="YOUR EMAIL" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">
+                    <img src="assets/images/Icon_password.png" alt="password">
+                </label>                
+                <input type="password" id="password" name="password" placeholder="PASSWORD" required>
+            </div>
+
+            <div class="form-group">
+                <label for="re-password">
+                    <img src="assets/images/Icon_password.png" alt="password">
+                </label>                
+                <input type="password" id="re-password" name="re-password" placeholder="REPEAT YOUR PASSWORD" required>
+            </div>
+
+            <div class="form-group-support">
+                <div class="checkbox">                   
+                    <input type="checkbox" id="remember">
+                    <label for="remember">I agree all statements in Terms of service</label>
+                    <a href="login.html">Already have an account?</a>
+                </div>
+            </div>
+
+            <button type="submit" class="button-login">SIGN UP</button>
+
+        </form>
+    </div>
+</body>
+</html>

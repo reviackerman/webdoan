@@ -1,0 +1,46 @@
+footer {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+}
+
+footer h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+footer p,
+footer a {
+  font-size: 20px;
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 8px;
+    transition: color 0.3s ease;
+
+}
+
+footer a:hover {
+  color: red;
+}
+
+footer .footer__social-link i {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+footer > div:first-child {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+footer > div:last-child {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid red;
+  padding-top: 20px;
+}

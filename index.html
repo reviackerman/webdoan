@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="icon" href="assets/images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/images/logo-png.png" alt="">
+        </div>
+        <div class="nav-container">   
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="login.html">Đăng nhập</a></li>
+                    <li><a href="register.html">Đăng kí</a></li>
+                    <li><a href="cart.html">Giỏ hàng</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+<main>
+                <section>
+                    <div class="flip-banner">
+                        <div class="flip-container">
+                            <img src="assets/images/bg-home.png" alt="Hình nền trang chủ" id="bg-home" class="banner-slide-up">
+                            <img src="assets/images/bg2-home.png" alt="Banner 2" id="bg2-home" class="banner-slide-up">
+                            <img src="assets/images/bg3-home.png" alt="Banner 3" id="bg3-home"  class="banner-slide-up">
+
+
+                        </div>
+                        <button class="prev">←</button>
+                        <button class="next">→</button> 
+                    </div>
+                
+                </section>
+                
+                <section class="product-carousel">
+                    <button class="carousel-prev">←</button>
+                    <div class="carousel-track">
+                        <div class="product-item">
+                            <a href="sanpham.html" class="product-link">
+                                <img src="assets/images/manhinh.webp" />
+                                <h1>MÀN HÌNH DESKTOP</h1>
+                            </a>
+                        </div>
+                        <div class="product-item" >
+                            <a href="sanpham.html"class="product-link">
+                                <img src="assets/images/bomachchu.webp" />
+                                <h1>BO MẠCH CHỦ</h1>
+                            </a>
+                        </div>
+                        <div class="product-item">
+                            <a href="sanpham.html"class="product-link">
+                                <img src="assets/images/banphim.webp" />
+                                <h1>BÀN PHÍM</h1>
+                            </a>
+                        </div>
+                        <div class="product-item">
+                            <a href="sanpham.html" class="product-link">
+                                <img src="assets/images/carddohoa.webp" />
+                                <h1>CARD ĐỒ HỌA</h1>
+                            </a>
+                        </div>
+                        <div class="product-item">
+                            <a href="sanpham.html" class="product-link">
+                                <img src="assets/images/lamamat.webp" />
+                                <h1>LÀM MÁT</h1>
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-next">→</button>
+                </section>
+                
+                <section class="about-section product-item">
+                    <div class="about-content  ">
+                        <img src="assets/images/about-us.jpg" alt="Giới thiệu LTTech" class="slide-up">
+                        <div class="about-text slide-up">
+                            <h1>Về LTTech</h1>
+                            <p>LTTech là đơn vị chuyên cung cấp linh kiện máy tính chất lượng cao, với hơn 10 năm kinh nghiệm trong ngành. Chúng tôi cam kết mang đến giải pháp tối ưu cho mọi nhu cầu công nghệ của bạn.</p>
+                            <a href="gioithieu.html" class="btn slide-up">Xem thêm</a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="special-offer-section product-item">
+                    <h1>Ưu đãi đặc biệt dành cho bạn</h1>
+                    <div class="offer-list">
+                        <div class="offer-item">
+                            <img src="assets/images/sale1.png" alt="Ưu đãi 1">
+                            <p>Giảm giá 20% cho tất cả sản phẩm gaming đến hết tháng này!</p>
+                            <a href="sanpham.html">
+                                <strong>Chỉ còn hôm nay! </strong>
+                            </a>
+                        </div>
+                        <div class="offer-item">
+                            <img src="assets/images/sale2.png" alt="Ưu đãi 2">
+                            <p>Miễn phí vận chuyển toàn quốc cho đơn hàng từ 500.000đ.</p>
+                            <a href="sanpham.html">
+                                <strong>Áp dụng toàn hệ thống</strong>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+        </main>
+        
+        <footer >
+        <div >
+            <div >
+                <h1 >Kết nối với chúng tôi</h1>
+                <div >
+                    <a href="https://www.facebook.com/" role="button"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="footer__social-link" href="https://www.instagram.com" role="button"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="footer__social-link" href="https://www.youtube.com/" role="button"><i
+                            class="fab fa-youtube"></i></a>
+                    <a class="footer__social-link" href="https://www.twitter.com/" role="button"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="footer__social-link" href="webtrangchu.html" role="button"><i class="fa fa-home"></i></a>
+                </div>
+            </div>
+
+            <div >
+                <h1>Thông Tin Liên Hệ</h1>
+                <a><i class="fas fa-home "> </i> ABC, Ninh Kiều, Cần Thơ</a>
+                <a><i class="fas fa-envelope "></i> @gmail.com</a>
+                <a><i class="fas fa-phone "></i> 0123 456 789</a>
+            </div>
+
+            <div class="footer__services">
+                <h1>Hỗ Trợ Khách Hàng</h1>
+                <a href="" class="footer__services-item">Chính sách bảo mật</a>
+                <a href="" class="footer__services-item">Hướng dẫn đặt hàng</a>
+                <a href="" class="footer__services-item">Chính sách Thanh toán và bảo hành</a>
+                <a href="" class="footer__services-item">Các câu hỏi thường gặp</a>
+            </div>
+
+            <div >
+                <h1 >Cửa Hàng Gần Nhất</h1>
+                <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Cần Thơ</a>
+                <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Hậu Giang</a>
+                <a href="" class="footer__location-item"><i class="fa-solid fa-location-dot"></i>Bến Tre</a>
+            </div>
+        </div>
+        
+        <div >
+            Copyright © 2025 Công Ty Dịch Vụ 5 thành viên. Designed by Nhóm 3
+        </div>
+        </footer>
+        <script src="main.js"></script>
+</body>
+</html>
