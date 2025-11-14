@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giỏ hàng</title>
+    <title>Sản phẩm</title>
     <link rel="icon" href="assets/images/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/cart_main.css">
     <link rel="stylesheet" href="assets/css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/product.css">
 </head>
 <body>
         <header>
@@ -25,7 +25,8 @@
             <nav>
                 <ul class="nav-list">
                     <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="product.html">Sản phẩm</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
                     <li><a href="login.html">Đăng nhập</a></li>
                     <li><a href="register.html">Đăng kí</a></li>
                     <li><a href="cart.html">Giỏ hàng</a></li>
@@ -38,31 +39,44 @@
     </header>
 
 <main>
-        <section class="product-list">
-            <div class="top-list">
-                <ul>
-                    <li>Đơn giá</li>
-                    <li>Số lượng</li>
-                    <li>Số tiền</li>
-                    <li>Thao tác</li>
-                </ul>
-            </div>
+    <div class="item">
+        <img src="./assets/images/product/rtx4060ti8gb.png" alt="Product Image" class="item-image">
+        <div class="item-details">
+            <p class="item-id" hidden>001</p>
+            <h2 class="item-name">Card đồ họa ASUS Prime RTX 4060 Ti 8GB</h2>
+            <p class="item-price">Giá: 12.000.000 VNĐ</p>
+        </div>
+        <a href="#" class="add-to-cart">Thêm vào giỏ hàng</a>
+    </div>
+    <div class="item">
+        <img src="./assets/images/product/rtx4060ti16gb.png" alt="Product Image" class="item-image">
+        <div class="item-details">
+            <p class="item-id" hidden>002</p>
+            <h2 class="item-name">Card đồ họa ASUS Dual RTX 4060 Ti 16GB</h2>
+            <p class="item-price">Giá: 14.000.000 VNĐ</p>
+        </div>
+        <a href="#" class="add-to-cart">Thêm vào giỏ hàng</a>
+    </div>
+    <div class="item">
+        <img src="./assets/images/product/corsairhx1500i.png" alt="Product Image" class="item-image">
+        <div class="item-details">
+            <p class="item-id" hidden>003</p>
+            <h2 class="item-name">Nguồn Corsair HX1500i</h2>
+            <p class="item-price">Giá: 9.500.000 VNĐ</p>
+        </div>
+        <a href="#" class="add-to-cart">Thêm vào giỏ hàng</a>
+    </div>
+    <div class="item">
+        <img src="./assets/images/product/LG27G640A-B.jpg" alt="Product Image" class="item-image">
+        <div class="item-details">
+            <p class="item-id" hidden>004</p>
+            <h2 class="item-name">Màn hình LG 27G640A-B UltraGear 27"</h2>
+            <p class="item-price">Giá: 7.300.000 VNĐ</p>
+        </div>
+        <a href="#" class="add-to-cart">Thêm vào giỏ hàng</a>
+    </div>
 
-            <div class="main-list" id="cart-items-list">
-                </div>
-        </section>
-
-        <section class="payment">
-            
-                <div class="right-list">
-                    <p>Tổng cộng</p>
-                    <p>(<span id="total-items-count">0</span> Sản phẩm):</p>
-                    <p id="total-price-value">0 đồng</p>
-                    <h1 class="buy-button">Mua Hàng</h1>
-                </div>
-            
-        </section>
-    </main>
+</main>
 
         <footer >
         <div >
@@ -108,6 +122,6 @@
             Copyright © 2025 Công Ty Dịch Vụ 5 thành viên. Designed by Nhóm 3
         </div>
         </footer>
-    <script src="cart.js"></script>
+    <script src="product.js"></script>
 </body>
 </html>
