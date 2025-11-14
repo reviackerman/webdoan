@@ -9,11 +9,11 @@
   padding: 10px;
   border-radius: 5px;
 }
-.top-list ul, .main-list [class^="product"] ul {
+.top-list ul, .product-item ul { 
   margin-left: auto;
   display: grid;
   list-style-type: none;
-  grid-template-columns: 120px 120px 120px 120px; /* 4 cột: Đơn giá - Số lượng - Số tiền - Thao tác */
+  grid-template-columns: 120px 120px 120px 120px; 
   text-align: center;
   padding: 10px 20px;
   padding: 0;
@@ -28,16 +28,13 @@
   font-size: 25px;
 }
 
-input[type="checkbox"] {
-    margin-left: 20px;
-  transform: scale(2.5);
-}
+
 
 .check {
     font-size: 25px;
 }
 
-.main-list [class^="product"] {
+.product-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -49,21 +46,63 @@ input[type="checkbox"] {
   border-radius: 5px;
 }
 
-.main-list [class^="product"] li {
+.product-item li {
   line-height: 1.8;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+.quantity-input {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+.quantity-input button {
+  width: 30px; 
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: #f7f7f7;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1; 
+  padding: 0;
+  transition: background-color 0.2s;
+}
+
+.quantity-input button:hover {
+  background-color: #eee;
+}
+
+
+.quantity-input input[type="number"] {
+  width: 45px; 
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-left: none; 
+  border-right: none; 
+  font-size: 1rem;
+  font-weight: 600;
+  
+
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.quantity-input input::-webkit-outer-spin-button,
+.quantity-input input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.quantity-input input[type=number] {
-  width: 20%;
-  text-align: center;
-  align-items: center;
+/* Bo tròn góc cho đẹp */
+.quantity-input button.minus {
+  border-radius: 4px 0 0 4px;
 }
+.quantity-input button.plus {
+  border-radius: 0 4px 4px 0;
+}
+
 
 .image {
     block-size: 200px;
@@ -90,15 +129,15 @@ input[type="number"]::-webkit-outer-spin-button {
 .left-list {
   display: flex;
   align-items: center;
-  gap: 10px; /* khoảng cách giữa checkbox và chữ */
+  gap: 10px; 
   font-size: 20px;
 }
 
-/* Right list: các thông tin và nút */
+
 .right-list {
   display: flex;
   align-items: center;
-  gap: 15px; /* khoảng cách giữa các phần tử */
+  gap: 15px; 
   font-size: 20px;
 }
 
@@ -107,7 +146,7 @@ input[type="number"]::-webkit-outer-spin-button {
   font-size: 30px;
 }
 
-/* Nút mua hàng to hơn */
+
 .payment .right-list h1 {
   margin: 10px;
   padding: 10px;
@@ -123,6 +162,13 @@ input[type="number"]::-webkit-outer-spin-button {
      margin-left: 10px;
 }
 
+.cart-empty-message {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 50px;
+  color: #777;
+}
+
 button:hover,
 .remove-button:hover {
   background-color: red;
@@ -130,10 +176,9 @@ button:hover,
 
 }
 
-/* responsive */
-/* 1. Tối ưu chung */
+
 .top-list, 
-.main-list [class^="product"], 
+.main-list .product-item, 
 .payment > div {
     max-width: 95%;
     width: 95%;
@@ -141,27 +186,27 @@ button:hover,
     box-sizing: border-box;
 }
 
-/* Khi màn hình nhỏ hơn 1170px */
+
 @media screen and (max-width: 1170px) {
-    /* Thu nhỏ left-list */
+   
     .left-list {
-        width: 200px; /* giảm chiều rộng */
-        gap: 8px; /* giảm khoảng cách giữa checkbox và chữ */
+        width: 200px; 
+        gap: 8px; 
     }
 
     .left-list img {
-        block-size: 100px; /* giảm kích thước ảnh */
+        block-size: 100px; 
         margin-left: 10px;
     }
 
     /* Thu nhỏ right-list */
     .right-list {
-        gap: 10px; /* giảm khoảng cách giữa các phần tử */
-        font-size: 18px; /* giảm chữ */
+        gap: 10px; 
+        font-size: 18px;
     }
 
     .right-list h1 {
-        font-size: 32px; /* giảm kích thước nút mua hàng */
+        font-size: 32px; 
         padding: 8px 20px;
     }
 
@@ -178,7 +223,7 @@ button:hover,
         margin-left: auto;
         display: grid;
         list-style-type: none;
-        grid-template-columns: 60px 60px 60px 60px; /* 4 cột: Đơn giá - Số lượng - Số tiền - Thao tác */
+        grid-template-columns: 60px 60px 60px 60px; 
         text-align: center;
         padding: 10px 20px;
         padding: 0;
@@ -188,21 +233,15 @@ button:hover,
         gap: 70px;
     }
 
-    .quantity-input button.minus,
-    .quantity-input button.plus {
-        display: none;
-    }
+    
 
-    .quantity-input input[type="number"] {
-        width: 50%; /* thu nhỏ ô input */
-        text-align: center;
-    }
+  
 }
 
 @media screen and (max-width: 768px) {
-    /* Mỗi sản phẩm 1 cột, ảnh trên */
-    .main-list [class^="product"] {
-        flex-direction: column; /* ảnh trên, nội dung dưới */
+    
+    .main-list .product-item { 
+        flex-direction: column; 
         align-items: flex-start;
         padding: 10px;
     }
@@ -210,7 +249,7 @@ button:hover,
       display: none;
     }
 
-    /* Ảnh */
+   
     .left-list img {
         width: 100%;
         max-width: 200px;
@@ -223,17 +262,17 @@ button:hover,
         display: flex;
     }
 
-    /* Left + Right list dưới ảnh, chia 2 cột */
+    
     .left-list, .right-list {
         width: 100%;
         display: grid;
-        align-items: center; /* Căn giữa theo chiều dọc */
-        grid-template-columns: repeat(2, 1fr); /* chia 2 cột */
-        gap: 10px 10px; /* khoảng cách giữa các cột và dòng */
+        align-items: center; 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px 10px; 
         margin-bottom: 10px;
     }
 
-    /* Nút mua hàng chiếm cả 2 cột */
+   
     .right-list h1 {
         grid-column: span 2;
         text-align: center;
@@ -242,7 +281,7 @@ button:hover,
         margin-top: 10px;
     }
 
-    /* Thu nhỏ chữ và nút */
+ 
     .right-list p, .left-list p {
         font-size: 18px;
     }
@@ -251,7 +290,7 @@ button:hover,
         display: none;
     }
 
-    /* Chỉ giảm font chữ của các thẻ text */
+
     .payment .left-list p,
     .payment .right-list p,
     .payment .right-list span,
@@ -259,13 +298,13 @@ button:hover,
         font-size: 90%;
     }
 
-    /* Giữ checkbox và nút cân đối */
+
     .payment .left-list input[type="checkbox"] {
-        transform: scale(1.5); /* vẫn nhìn rõ */
-        margin-left: 5px; /* nhỏ hơn margin ban đầu */
+        transform: scale(1.5); 
+        margin-left: 5px; 
     }
 
-    /* Nút Mua Hàng */
+ 
     .payment .right-list h1 {
         padding: 5px 10px;
         font-size: 90%;
